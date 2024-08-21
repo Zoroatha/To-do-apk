@@ -139,22 +139,26 @@ function agregarTarea() {
         const li = document.createElement('li');
         li.textContent = tarea + " (" + fecha + ")";
         document.getElementById('listaTareas').appendChild(li);
+            // Add button and event listener inside the loop
+            const botonCompletar = document.createElement('button');
+            botonCompletar.textContent = 'Completada';
+            botonCompletar.classList.add('btn-completar');
+            li.appendChild(botonCompletar);
 
+            botonCompletar.addEventListener('click', () => {
+                li.classList.toggle('completado');
+            });
         // Limpiar los campos de entrada
         document.getElementById('tarea').value = '';
         document.getElementById('fecha').value = '';
        
             }
 
+
               // Agregar un evento de clic a toda la lista
               li.addEventListener('click', () => {
                 li.classList.toggle('completado');
             });
-                // Agregar un botón para marcar como completada
-                const botonCompletar = document.createElement('button');
-                botonCompletar.textContent = 'Completada';
-                botonCompletar.classList.add('btn-completar');
-                li.appendChild(botonCompletar);
             
                 // Agregar un evento de clic al botón
                 botonCompletar.addEventListener('click', () => {

@@ -132,12 +132,4 @@ canvas#neuro {
     text-decoration: line-through;
     opacity: 0.5;
 }
-.btn-completar {
-    /* Estilo para el botón de completar */
-    padding: 5px;
-    border: none;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    cursor: pointer;
-}
 
